@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/ocatm/META"
+  "_build/install/default/lib/ocatm/dune-package"
+  "_build/install/default/lib/ocatm/opam"
+]
+bin: [
+  "_build/install/default/bin/ocatm"
+]

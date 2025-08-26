@@ -1,0 +1,23 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/s_feles_/.cache/dune/db
+# Workspace root: /home/s_feles_/ocatm
+# Auto-detected concurrency: 20
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/s_feles_/.opam/5.3.0/bin/ocamlc.opt -config > /tmp/dune_f4fa2a_output
+$ (cd _build/default && /home/s_feles_/.opam/5.3.0/bin/ocamldep.opt -modules -impl lib/dfa.ml) > _build/default/lib/.ocatm.objs/ocatm__Dfa.impl.d
+$ (cd _build/default && /home/s_feles_/.opam/5.3.0/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.ocatm.objs/byte -cmi-file lib/.ocatm.objs/byte/ocatm__Dfa.cmi -no-alias-deps -opaque -open Ocatm -o lib/.ocatm.objs/byte/ocatm__Dfa.cmo -c -impl lib/dfa.ml)
+$ (cd _build/default && /home/s_feles_/.opam/5.3.0/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/ocatm.cma lib/.ocatm.objs/byte/ocatm.cmo lib/.ocatm.objs/byte/ocatm__Dfa.cmo)
+$ (cd _build/default && /home/s_feles_/.opam/5.3.0/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.ocatm.objs/byte -I lib/.ocatm.objs/native -cmi-file lib/.ocatm.objs/byte/ocatm__Dfa.cmi -no-alias-deps -opaque -open Ocatm -o lib/.ocatm.objs/native/ocatm__Dfa.cmx -c -impl lib/dfa.ml)
+$ (cd _build/default && /home/s_feles_/.opam/5.3.0/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/ocatm.cmxa lib/.ocatm.objs/native/ocatm.cmx lib/.ocatm.objs/native/ocatm__Dfa.cmx)
+$ (cd _build/default && /home/s_feles_/.opam/5.3.0/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/ocatm.cmxs lib/ocatm.cmxa)
+$ (cd _build/default && /home/s_feles_/.opam/5.3.0/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/ocatm.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
